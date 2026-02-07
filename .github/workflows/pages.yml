@@ -21,9 +21,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-      - run: npm install
-      - run: npm run build
+          cache: 'pnpm'
+      - run: npm i -g pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
         env:
           VITE_BASE: /${{ github.event.repository.name }}/
       - uses: actions/upload-pages-artifact@v3
