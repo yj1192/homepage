@@ -39,8 +39,9 @@ const HeroSection = () => {
         {/* 简介 */}
         <div className="text-base xl:text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed space-y-2">
           <p>工地安防监控、工程质量检测类计算机视觉应用工程师，</p>
-          <p>已在WaytoAGI第二期智能体训练营学习Coze工作流智能体，</p>
-          <p>准备学习WaytoAGI第四期AI Coding，</p>
+          <p>WaytoAGI第二期Coze智能体训练营优秀学员，</p>
+          <p>WaytoAGI第三期AI短剧训练营结业学员，</p>
+          <p>WaytoAGI第四期Vibe Coding训练营结业预备，</p>
           <p>热爱AIGC，希望能为工作、学习和生活提效赋能</p>
         </div>
 

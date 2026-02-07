@@ -37,29 +37,29 @@ export const aiTools: AiTool[] = [
     tags: ["Image", "Art", "Discord"]
   },
   {
-    id: "stable-diffusion",
-    name: "Stable Diffusion",
-    description: "开源的图像生成模型，支持本地部署和高度定制化。",
-    url: "https://stability.ai",
-    icon: "https://unavatar.io/stability.ai",
+    id: "nano-banana",
+    name: "Nano Banana",
+    description: "轻量级图像生成与创作工具，面向入门与快速创作场景。",
+    url: "#",
+    icon: "/images/logo/logo-icon.svg",
     category: "图像生成",
-    tags: ["OpenSource", "Image", "Local"]
+    tags: ["Image", "Creative", "Lightweight"]
   },
   {
-    id: "github-copilot",
-    name: "GitHub Copilot",
-    description: "GitHub 推出的 AI 编程助手，提供实时代码补全和建议。",
-    url: "https://github.com/features/copilot",
-    icon: "https://unavatar.io/github.com",
+    id: "cursor",
+    name: "Cursor",
+    description: "基于先进模型的 AI IDE，支持代码生成、重构与对话式开发。",
+    url: "https://www.cursor.com",
+    icon: "https://unavatar.io/cursor.com",
     category: "编程辅助",
-    tags: ["Coding", "GitHub", "VSCode"]
+    tags: ["IDE", "Coding", "AI"]
   },
   {
     id: "trae",
     name: "Trae",
     description: "新一代 AI IDE，提供智能代码补全、生成和重构功能。",
     url: "https://www.trae.ai",
-    icon: "https://lf-cdn.trae.ai/obj/trae-ai-cn/trae-logo.png",
+    icon: "https://unavatar.io/trae.ai",
     category: "编程辅助",
     tags: ["IDE", "Coding", "AI"]
   },
