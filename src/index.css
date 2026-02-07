@@ -1,0 +1,175 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 1rem;
+    /* 科技感深色主题 */
+    --background: 240 100% 2%;
+    --foreground: 210 40% 98%;
+    
+    --card: 240 50% 8%;
+    --card-foreground: 210 40% 98%;
+    
+    --popover: 240 50% 8%;
+    --popover-foreground: 210 40% 98%;
+    
+    /* 主色：深蓝到紫色 */
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 280 84% 65%;
+    
+    /* 辅助色：青色 */
+    --secondary: 187 100% 50%;
+    --secondary-foreground: 240 100% 2%;
+    
+    --muted: 240 30% 15%;
+    --muted-foreground: 215 20% 65%;
+    
+    /* 强调色：粉色 */
+    --accent: 330 100% 63%;
+    --accent-foreground: 210 40% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    
+    --border: 240 30% 18%;
+    --input: 240 30% 18%;
+    --ring: 262 83% 58%;
+    
+    /* 自定义渐变和效果 */
+    --gradient-primary: linear-gradient(135deg, hsl(262 83% 58%), hsl(280 84% 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(187 100% 50%), hsl(262 83% 58%));
+    --gradient-accent: linear-gradient(135deg, hsl(330 100% 63%), hsl(262 83% 58%));
+    
+    --shadow-glow: 0 0 40px hsl(262 83% 58% / 0.4);
+    --shadow-glow-cyan: 0 0 30px hsl(187 100% 50% / 0.3);
+    --shadow-glow-pink: 0 0 30px hsl(330 100% 63% / 0.3);
+    --shadow-card: 0 10px 40px -10px hsl(262 83% 58% / 0.3);
+  }
+
+  .dark {
+    --background: 240 100% 2%;
+    --foreground: 210 40% 98%;
+    --card: 240 50% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 240 50% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 187 100% 50%;
+    --secondary-foreground: 240 100% 2%;
+    --muted: 240 30% 15%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 330 100% 63%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 30% 18%;
+    --input: 240 30% 18%;
+    --ring: 262 83% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground scroll-smooth;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  .gradient-bg {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary-bg {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-accent-bg {
+    background: var(--gradient-accent);
+  }
+  
+  .glow-effect {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-cyan {
+    box-shadow: var(--shadow-glow-cyan);
+  }
+  
+  .glow-pink {
+    box-shadow: var(--shadow-glow-pink);
+  }
+  
+  .card-glow {
+    box-shadow: var(--shadow-card);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card-glow:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-4px);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px hsl(262 83% 58% / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 40px hsl(262 83% 58% / 0.6);
+    }
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+}
