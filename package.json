@@ -2,6 +2,10 @@
   "name": "miaoda-react-admin",
   "version": "0.0.1",
   "type": "module",
+  "engines": {
+    "node": "18.x"
+  },
+  "packageManager": "pnpm@9.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
